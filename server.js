@@ -1,11 +1,11 @@
 require('dotenv').config()
-const app = require()
+const app = require('./app')
 const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3000
 
 mongoose.connect(process.env.MONGO_URI)
-mongoose.connection.once('open', () => console.log('Mongo is showing love'))
+mongoose.connection.once('open', () => console.log('Mongo be showing love'))
 
 app.listen(PORT, () => {
-    console.log(`We in the building ${PORT}`)
+    console.log(`${PORT} is firing`)
 })
