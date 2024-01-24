@@ -28,7 +28,7 @@ exports.index = async (req, res) => {
 
 exports.show = async (req, res) => {
     try {
-        const foundMovie = await Movie.findOne({_id: req.params.id})
+        const foundMovie = await Movie.findOne({_id: req.params.id}).populate('cast name')
         res.status(200).json(foundMovie)
     }
     catch(error){
